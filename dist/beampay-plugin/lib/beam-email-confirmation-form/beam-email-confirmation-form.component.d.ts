@@ -1,0 +1,30 @@
+import { OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { Router } from "@angular/router";
+import { BeampayPluginService } from "../beampay-plugin.service";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import * as i0 from "@angular/core";
+export declare class BeamEmailConfirmationFormComponent implements OnInit {
+    private fb;
+    private router;
+    private beampayPluginService;
+    private matSnackBar;
+    authForm: FormGroup;
+    termsAccepted: boolean;
+    showOtp: boolean;
+    showGateway: boolean;
+    amount: any;
+    lineItems: any;
+    terminalKey: string;
+    loading: boolean;
+    fundingSourceUuid: any;
+    constructor(fb: FormBuilder, router: Router, beampayPluginService: BeampayPluginService, matSnackBar: MatSnackBar);
+    ngOnInit(): void;
+    requestOtp(uuid: string): void;
+    finalizeOrder(): void;
+    getUuid(): void;
+    joinConversation(fundingSourceUuid: any, authToken: string): void;
+    getConversationStatus(referenceIdentifier: any, authToken: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BeamEmailConfirmationFormComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BeamEmailConfirmationFormComponent, "app-beam-email-confirmation-form", never, { "showGateway": "showGateway"; "amount": "amount"; "lineItems": "lineItems"; "terminalKey": "terminalKey"; }, {}, never, never>;
+}

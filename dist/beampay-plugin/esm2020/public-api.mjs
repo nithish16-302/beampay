@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of beampay-plugin
+ */
+export * from './lib/beampay-plugin.service';
+export * from './lib/beampay-plugin.component';
+export * from './lib/beampay-plugin.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2JlYW1wYXktcGx1Z2luL3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyw4QkFBOEIsQ0FBQztBQUM3QyxjQUFjLGdDQUFnQyxDQUFDO0FBQy9DLGNBQWMsNkJBQTZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIGJlYW1wYXktcGx1Z2luXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvYmVhbXBheS1wbHVnaW4uc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9iZWFtcGF5LXBsdWdpbi5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvYmVhbXBheS1wbHVnaW4ubW9kdWxlJztcbiJdfQ==

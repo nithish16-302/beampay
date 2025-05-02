@@ -1,0 +1,31 @@
+{
+  "name": "beampay-plugin",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/beampay-plugin.mjs",
+  "es2020": "fesm2020/beampay-plugin.mjs",
+  "esm2020": "esm2020/beampay-plugin.mjs",
+  "fesm2020": "fesm2020/beampay-plugin.mjs",
+  "fesm2015": "fesm2015/beampay-plugin.mjs",
+  "typings": "beampay-plugin.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./beampay-plugin.d.ts",
+      "esm2020": "./esm2020/beampay-plugin.mjs",
+      "es2020": "./fesm2020/beampay-plugin.mjs",
+      "es2015": "./fesm2015/beampay-plugin.mjs",
+      "node": "./fesm2015/beampay-plugin.mjs",
+      "default": "./fesm2020/beampay-plugin.mjs"
+    }
+  },
+  "sideEffects": false
+}
