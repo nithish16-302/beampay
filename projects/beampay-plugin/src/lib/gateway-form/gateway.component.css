@@ -1,0 +1,39 @@
+.beam-gateway-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.beam-gateway-container h2 {
+  margin-bottom: 10px;
+}
+
+.beam-gateway-container p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-checkbox {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.bg-pink {
+  background-color: #ff2069; /* Beam pay color */
+}
+
+.text-white {
+  color: #ffffff; /* White text */
+}

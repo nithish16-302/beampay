@@ -1,0 +1,58 @@
+
+.full-width {
+  width: 100%;
+}
+
+.margin {
+  margin-top: 5%;
+}
+
+.privacy-section {
+  font-size: 14px;
+  color: #333;
+}
+
+.logo-style {
+  width: 20%;
+  margin-top: 1%;
+}
+
+.bg-pink {
+  background-color: #ff2069; /* Beam pay color */
+}
+
+.text-white {
+  color: #ffffff; /* White text */
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+svg {
+  width: 40px!important;
+  height: 40px!important;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional blur on background */
+.main-content.blurred {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}

@@ -1,0 +1,73 @@
+<mat-card class="mat-background-white">
+  <div class="loader-overlay" *ngIf="loading">
+    <mat-spinner mode="indeterminate" diameter="30"></mat-spinner>
+  </div>
+  <form [formGroup]="authForm" *ngIf="!showGateway" class="main-content" [class.blurred]="loading">
+    <img src="https://beamwallet.com/about-us/wp-content/uploads/2021/03/logo_beam.png"
+         alt="Beam Logo" class="logo logo-style" />
+    <p class="mat-caption">Authenticate with your Beam account to receive One Time Password before making a
+      purchase.</p>
+
+    <mat-form-field appearance="outline" class="full-width" *ngIf="!showOtp">
+      <mat-label>Email Address</mat-label>
+      <input matInput placeholder="Enter your email address" formControlName="email">
+      <mat-error *ngIf="authForm.get('email')?.invalid && authForm.get('email')?.touched">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width" *ngIf="!showOtp">
+      <mat-label>Pin Code</mat-label>
+      <input matInput type="password" placeholder="Enter your pin code" formControlName="pinCode" required>
+      <mat-error *ngIf="authForm.get('pinCode')?.hasError('required')">
+        Pin Code is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width" *ngIf="showOtp">
+      <mat-label>Enter Your One Time Password</mat-label>
+      <input
+        matInput
+        maxlength="6"
+        formControlName="otp"
+        autocomplete="one-time-code"
+        placeholder="123456"
+      />
+      <mat-error *ngIf="authForm.get('otp')?.hasError('required')">
+        OTP is required.
+      </mat-error>
+      <mat-error *ngIf="authForm.get('otp')?.hasError('pattern')">
+        OTP must be 6 digits.
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="bg-pink" (click)="getUuid()" *ngIf="!showOtp" type="button">
+      Request One Time Password
+    </button>
+
+
+    <div class="privacy-section">
+      <p class="mat-caption">
+        Your personal data will be used to process your order, to improve your experience throughout the store
+        and for the purposes described in our
+        <a href="#">privacy policy</a>.
+      </p>
+
+      <mat-checkbox formControlName="acceptTerms" class="mat-caption">
+        I have read and accept the store's <a href="#">terms and conditions</a>
+      </mat-checkbox>
+      <mat-error *ngIf="authForm.get('acceptTerms')?.invalid && authForm.get('acceptTerms')?.touched"
+                 class="mat-caption">
+        You must accept terms and conditions
+      </mat-error>
+    </div>
+    <button mat-raised-button class="full-width margin bg-pink text-white" (click)="finalizeOrder()" [disabled]="!authForm.get('otp')?.valid">
+      Finalize Order
+    </button>
+  </form>
+  <div *ngIf="showGateway">
+      <app-gateway></app-gateway>
+  </div>
+</mat-card>
+
+
